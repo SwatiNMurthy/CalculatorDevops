@@ -1,7 +1,15 @@
 package calculator;
 import java.util.*;
+//line added
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+//line added
 public class App
 {
+//line added
+private static final Logger logger = LogManager.getLogger(App.class);
+//line added
+    //
     public static void main(String args[])
     {
         int choice, flag=0;
@@ -39,8 +47,10 @@ public class App
             System.out.println("\n");
             }while(flag==0);
     }
-    
+    //logger.error("print an error");
+    //logger.info("print some info");
     static double Add(double a, double b) {
+    logger.info("Adding two numbers"+a +"and"+b);
     	return a + b;
     }
     static double Subtract(double a, double b) {
